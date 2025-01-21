@@ -1,77 +1,238 @@
-/* Add this to your styles.css */
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Resize logo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #2c3e50;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Header Section */
+header {
+    background-color: #1a232e;
+    color: white;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
 header .logo img {
-    width: 150px; /* Adjust to your desired size */
-    height: auto; /* Maintain aspect ratio */
-    transition: width 0.3s ease; /* Smooth transition */
+    width: 200px;
+    height: auto;
 }
 
-header .logo img:hover {
-    width: 180px; /* Slightly larger on hover for interactivity */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Make the header text stand out */
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    color: #3498db;
+    transform: translateY(-3px);
+}
+
+/* Mobile Navigation */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navbar-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+#nav-links.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #1a232e;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
 .hero-content h1 {
-    font-size: 2.5em; /* Increase font size for prominence */
-    font-weight: bold; /* Make text bolder */
-    color: #2c3e50; /* Darker, contrasting color */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for emphasis */
-    margin-bottom: 20px; /* Spacing for better visual flow */
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 1.2em; /* Slightly larger paragraph text */
-    color: #34495e; /* Lighter contrast for readability */
-    line-height: 1.6; /* Improve line spacing for better legibility */
-    max-width: 800px; /* Restrict width for better readability */
+    font-size: 1.3rem;
     margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
-    background-color: #2980b9; /* Button background color */
-    color: white; /* Text color on button */
-    font-size: 1.1em;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 40px;
     text-decoration: none;
-    display: inline-block;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #3498db; /* Hover effect for buttons */
-    transform: scale(1.05); /* Slight scale effect for interactivity */
+    background-color: #3498db;
+    transform: scale(1.05);
 }
 
-/* Additional styling for section headings */
-section h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #2c3e50;
-    text-transform: uppercase;
+/* Section Layout */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.service-block {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: #ecf0f1;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-section h3 {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #2980b9; /* Use a blue color for subheadings */
-    margin-bottom: 10px;
+.cta-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Add some spacing between sections */
-section {
-    padding: 40px 20px;
-    background-color: #f4f4f4; /* Light background for sections */
-    margin-bottom: 30px;
+.cta-button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
 }
 
+.social-icons a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #2980b9;
+}
+
+/* Footer */
 footer {
     background-color: #2c3e50;
     color: white;
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 footer a {
@@ -81,4 +242,309 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+footer .social-icons a:hover {
+    color: #2980b9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service-block {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+    
+    .navbar-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #1a232e;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+}
+
+/* Section Specific Styles */
+#about, #services, #success-stories {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+#about h2, #services h2, #success-stories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#about p, #services p, #success-stories p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: #ecf0f1;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Us Section (Unchanged) */
+#contact-us {
+    padding: 80px 20px;
+    background-color: #fff;
+    color: #2c3e50;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#contact-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f4f6f7;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button.cta-button {
+    padding: 15px 30px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.contact-form button.cta-button:hover {
+    background-color: #3498db;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 60px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Community Section */
+#community {
+    padding: 80px 20px;
+    background-color: #fff;
+    color: #2c3e50;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#community .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f4f6f7;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#community h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#community p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+.community-form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.community-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.community-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.community-form label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.community-form input,
+.community-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.community-form textarea {
+    resize: vertical;
+}
+
+.community-form button.cta-button {
+    padding: 15px 30px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.community-form button.cta-button:hover {
+    background-color: #3498db;
+}
+
+.community-info {
+    margin-top: 60px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.community-info h3 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.community-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.community-info ul li {
+    margin-bottom: 10px;
 }
