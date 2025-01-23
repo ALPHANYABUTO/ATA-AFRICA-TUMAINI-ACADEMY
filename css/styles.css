@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #2c3e50;
-    line-height: 1.6;
+    line-height: 2.6;
     font-size: 1rem; /* Slightly smaller font size */
 }
 
@@ -39,7 +39,7 @@ nav {
 
 ul {
     display: flex;
-    gap: 15px; /* Reduced gap between items */
+    gap: 10px; /* Reduced gap between items */
     list-style: none;
     margin: 0;
 }
@@ -304,90 +304,6 @@ footer .social-icons a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Us Section */
-#contact-us {
-    padding: 80px 20px;
-    background-color: #fff;
-    color: #2c3e50;
-    margin-top: 80px;
-    text-align: center;
-}
-
-#contact-us .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #f4f6f7;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
-p {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    margin-bottom: 40px;
-}
-
-/* Contact Form */
-.contact-form-container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form .form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: #2c3e50;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    width: 100%;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form button.cta-button {
-    padding: 15px 30px;
-    background-color: #2980b9;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    letter-spacing: 1px;
-}
-
-.contact-form button.cta-button:hover {
-    background-color: #3498db;
-}
-
 /* Community Section */
 #community {
     padding: 80px 20px;
@@ -523,14 +439,32 @@ p {
 }
 
 .about-images {
+    display: flex;
+    justify-content: space-around;  /* Ensures equal space between images */
+    align-items: center;            /* Aligns images vertically in the center */
     margin-bottom: 40px;
 }
 
+.team-photo {
+    flex: 1;  /* Makes the image container flexible */
+    margin: 0 15px;  /* Adds spacing between the images */
+    overflow: hidden;  /* Hides the part that moves outside the container */
+    position: relative; /* Makes sure the images stay within bounds when they move */
+}
+
 .team-photo img {
-    width: 300px;
+    width: 100%; /* Makes the image responsive */
+    max-width: 300px; /* Ensures images don’t get too large */
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds a smooth transition effect */
+}
+
+/* Hover effect */
+.team-photo:hover img {
+    transform: translateY(-10px) scale(1.05); /* Moves the image up and scales it slightly */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increases the shadow for a floating effect */
 }
 
 .about-mission, .about-why {
@@ -554,9 +488,10 @@ p {
     line-height: 1.6;
 }
 
+
 /* Services Section Styling */
 #services {
-    padding: 80px 20px;
+    padding: 60px 20px; /* Reduced padding around the section */
     text-align: center;
     background-color: #fff;
     display: flex;
@@ -567,9 +502,30 @@ p {
 }
 
 #services h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+    font-size: 2.5rem; /* Slightly smaller heading size */
+    margin-bottom: 30px; /* Reduced margin */
     color: #2c3e50;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Services Section Styling */
+#services {
+    padding: 40px 20px; /* Reduced padding for a more compact section */
+    text-align: center;
+    background-color: #f4f4f4; /* Light gray background to match the overall theme */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto; /* Remove the 100vh to allow content to fit better */
+    justify-content: center;
+    margin-bottom: 40px; /* Added margin at the bottom for spacing between sections */
+}
+
+#services h2 {
+    font-size: 2.5rem; /* Reduced font size for the heading */
+    margin-bottom: 20px; /* Reduced margin below the heading */
+    color: #2c3e50; /* Dark color for the heading to maintain consistency */
     font-weight: 700;
     text-align: center;
 }
@@ -577,44 +533,44 @@ p {
 /* Service Grid Layout */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto-responsive columns */
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly reduced card width */
+    gap: 20px; /* Reduced gap between service cards */
     justify-items: center;
-    max-width: 1200px;
+    max-width: 1182px; /* Maintained max width for consistency */
     width: 100%;
     margin: 0 auto;
 }
 
 .service-card {
-    background-color: #fff;
+    background-color: #ffffff; /* White background for cards */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px; /* Reduced padding inside the cards */
     width: 100%;
-    max-width: 350px;
+    max-width: 330px; /* Slightly reduced the max-width of the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .service-card h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #2c3e50;
+    font-size: 1.8rem; /* Reduced font size for the card titles */
+    margin-bottom: 12px; /* Reduced margin between title and description */
+    color: #2c3e50; /* Dark color for consistency */
     font-weight: 600;
 }
 
 .service-card p {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Slightly smaller paragraph font size */
+    color: #7f8c8d; /* Light gray text for description */
+    margin-bottom: 15px; /* Reduced margin below text */
 }
 
 .service-card .cta-button {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #2980b9;
+    padding: 10px 25px; /* Slightly reduced padding for the button */
+    background-color: #2980b9; /* Button color (matching your theme) */
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Smaller font size for the button text */
     text-decoration: none;
     border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -626,7 +582,7 @@ p {
 }
 
 .service-card .cta-button:hover {
-    background-color: #3498db;
+    background-color: #3498db; /* Slightly brighter blue for hover effect */
     transform: scale(1.05);
 }
 
