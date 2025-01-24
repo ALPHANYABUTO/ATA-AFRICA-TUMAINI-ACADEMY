@@ -12,38 +12,58 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo">
+            <a href="index.html">
+                <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo">
+            </a>
         </div>
         <nav>
-            <ul>
+            <div class="navbar-toggle" onclick="toggleNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="success-stories.html">Success Stories</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li> 
             </ul>
         </nav>
     </header>
-
     <!-- Services Section -->
     <section id="services">
         <h2>Our Core Services</h2>
         <div class="service-grid">
+            <!-- SAT Prep -->
             <div class="service-card">
                 <h3>SAT Prep</h3>
-                <p>Free SAT preparation materials and study guides to help you excel.</p>
-                <a href="services.html" class="cta-button">Learn More</a>
+                <p>Free SAT preparation materials and study guides to help you excel in the exam.</p>
+                <!-- Link to SAT Prep page or application form -->
+                <a href="https://www.yoursatprep.com" class="cta-button" target="_blank">Apply Here</a>
             </div>
+            <!-- TOEFL Prep -->
             <div class="service-card">
-                <h3>Duolingo Prep</h3>
-                <p>Prepare for the Duolingo test with tailored resources and practice questions.</p>
-                <a href="services.html" class="cta-button">Learn More</a>
+                <h3>TOEFL Prep</h3>
+                <p>Prepare for the TOEFL exam with tailored resources, practice questions, and tips.</p>
+                <!-- Link to TOEFL Prep page or application form -->
+                <a href="https://www.yourtoeflprep.com" class="cta-button" target="_blank">Apply Here</a>
             </div>
+            <!-- College Mentorship -->
             <div class="service-card">
-                <h3>Mentorship</h3>
-                <p>Receive personalized mentorship to guide you through the U.S. university application process.</p>
-                <a href="services.html" class="cta-button">Learn More</a>
+                <h3>College Mentorship</h3>
+                <p>Get personalized mentorship and guidance through the college application process.</p>
+                <!-- Link to College Mentorship page or application form -->
+                <a href="https://www.yourmentorshipprogram.com" class="cta-button" target="_blank">Apply Here</a>
+            </div>
+            <!-- Scholarship Listings -->
+            <div class="service-card">
+                <h3>Scholarship Listings</h3>
+                <p>Access a curated list of scholarships and financial aid opportunities for your education.</p>
+                <!-- Link to Scholarship Listings page or application form -->
+                <a href="https://www.yourscholarships.com" class="cta-button" target="_blank">Acess Here</a>
             </div>
         </div>
         <a href="community.html" class="cta-button join-community">Join the Community</a>
