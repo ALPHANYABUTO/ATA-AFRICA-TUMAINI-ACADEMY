@@ -190,10 +190,29 @@ ul li a:hover {
 footer {
     background-color: #2c3e50; /* Dark background */
     color: white;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 0.875rem; /* Smaller font size */
-    letter-spacing: 0.5px;
+    padding: 20px 40px;
+    text-align: center; /* Center the text */
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center; /* Center the logo and text together */
+    align-items: center; /* Vertically center the items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+footer .footer-logo {
+    display: inline-block;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+footer .footer-logo img {
+    width: 160px; /* Reduced the logo size to 30px */
+    height: auto;
+}
+
+footer .footer-text {
+    text-align: center; /* Keep the text centered */
 }
 
 footer a {
@@ -229,13 +248,27 @@ footer .social-icons a:hover {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     footer {
-        padding: 40px 20px;
+        padding: 20px 20px;
     }
 
-    footer .social-icons a {
-        font-size: 1rem; /* Smaller font size on mobile for better alignment */
+    footer .footer-content {
+        flex-direction: column; /* Stack logo and text vertically on smaller screens */
+        align-items: center; /* Center them */
+    }
+
+    footer .footer-logo img {
+        width: 25px; /* Further reduce logo size on mobile */
+    }
+
+    footer .footer-text {
+        text-align: center; /* Keep the text centered on mobile */
+    }
+
+    footer .social-icons {
+        justify-content: center; /* Center social icons on mobile */
     }
 }
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -301,7 +334,6 @@ footer .social-icons a:hover {
 
 /* About Us Section Styling */
 #about {
-    padding: 40px 20px 60px;
     background-color: #fff;
     text-align: center;
 }
@@ -826,4 +858,52 @@ body {
 .community-form button.cta-button:hover {
     background-color: #3498db;
     transform: scale(1.05);
+}
+/* Centering the "Meet Our Founders" section */
+#founders .about-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Ensures text is centered */
+}
+
+/* Centering the introduction text */
+#founders .about-intro {
+    margin-bottom: 40px;
+}
+
+/* Styling the founder images section */
+#founders .about-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjust space between images */
+    margin-top: 30px;
+    text-align: center; /* Ensures images and captions are centered */
+}
+
+/* Styling each individual founder image (keeping the images as they were, no size change) */
+#founders .team-photo img {
+    width: auto; /* Keeps the image width as is */
+    height: auto; /* Keeps the image height as is */
+    max-width: 100%; /* Ensures the images scale down on smaller screens */
+}
+
+/* Centering the text below the founder images */
+#founders .about-mission, #founders .about-why {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Optional: Styling the founder section headers */
+#founders h2, #founders h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Optional: Adding space between paragraphs */
+#founders p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
 }

@@ -6,6 +6,85 @@
     <title>About Us - Africa Tumaini Academy</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Style for the about container */
+        .about-container {
+            text-align: center;
+            margin: 40px;
+        }
+
+        /* Flexbox for aligning the team members horizontally */
+        .about-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;  /* Allows items to wrap in smaller screens */
+            margin-top: 40px;
+        }
+
+        /* Style for each team member */
+        .team-photo {
+            text-align: center;
+        }
+
+        /* Basic styling for the images */
+        .headshot {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the team names */
+        .team-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2a2a2a;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Style for the team titles */
+        .team-title {
+            margin-top: 5px;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #333;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: #f2f2f2;
+            padding: 8px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover effect to give interactivity */
+        .team-title:hover {
+            background-color: #007bff;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Optional: Animations to make them more lively */
+        @keyframes titleAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply animation to the title */
+        .team-title {
+            animation: titleAnimation 0.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,25 +114,46 @@
     </header>
 
     <!-- About Us Section -->
-    <section id="about">
+    <section id="about" class="section">
+        <div class="about-container">
+            <h2>About Africa Tumaini Academy</h2>
+            <p>Africa Tumaini Academy is a non-profit organization dedicated to empowering African students by providing free, high-quality resources and mentorship to help them succeed in gaining access to U.S. universities. Through expert guidance and comprehensive preparation for the SAT and Duolingo English Test, we help students navigate the complex application process with confidence.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is to ensure that African students have the tools, knowledge, and support needed to gain admission to U.S. universities. We offer free SAT and Duolingo prep materials, personalized mentorship, and guidance to help students reach their educational goals.</p>
+
+            <h3>Why We Do This</h3>
+            <p>We believe that every African student deserves an equal opportunity to pursue higher education abroad. By providing free resources and personalized mentorship, Africa Tumaini Academy removes the financial barriers and logistical challenges that many students face in preparing for U.S. university applications. Our goal is to make U.S. education accessible to all talented African students.</p>
+        </div>
+    </section>
+
+    <!-- Meet Our Founders Section -->
+    <section id="founders" class="section">
         <div class="about-container">
             <div class="about-intro">
-                <h2>Meet Zak, Alpha, and Gloire</h2>
+                <h2>Meet Our Team</h2>
                 <p>We are three passionate Berea College students — <strong>Zak</strong>, <strong>Alpha</strong>, and <strong>Gloire</strong> — who see the challenges East African students face in pursuing higher education in the U.S. From our own experiences as East Africans, we understand the unique hurdles, and that's why we created Africa Tumaini Academy. Our goal is to provide free resources, mentorship, and guidance on SAT, TOEFL, and Duolingo prep to help African students overcome these barriers and achieve their dreams.</p>
             </div>
 
+            <!-- Align photos, names, and titles in one row -->
             <div class="about-images">
-                <!-- Zak's Photo -->
+                <!-- Zak's Photo with Name and Title -->
                 <div class="team-photo">
                     <img src="images/zak-photo.JPG" alt="Zak's Headshot" class="headshot">
+                    <p class="team-name">Zak Shendera</p>
+                    <p class="team-title">Founder & Executive Director</p>
                 </div>
-                <!-- Alpha's Photo -->
+                <!-- Alpha's Photo with Name and Title -->
                 <div class="team-photo">
                     <img src="images/alpha-photo1.JPG" alt="Alpha's Headshot" class="headshot">
+                    <p class="team-name">Alpha Nyabuto</p>
+                    <p class="team-title">Founder & Operations Manager</p>
                 </div>
-                <!-- Gloire's Photo -->
+                <!-- Gloire's Photo with Name and Title -->
                 <div class="team-photo">
                     <img src="images/gloire-photo.JPG" alt="Gloire's Headshot" class="headshot">
+                    <p class="team-name">Gloire Muzeba</p>
+                    <p class="team-title">Founder & Marketing Lead</p>
                 </div>
             </div>
         </div>
@@ -71,9 +171,20 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
-        <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a></p>
+        <div class="footer-content">
+            <!-- Logo on the left -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <!-- Text centered -->
+            <div class="footer-text">
+                <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+                <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="https://www.tiktok.com/@chkidesign/video/7458494831875132702">TikTok</a></p>
+            </div>
+        </div>
     </footer>
-
 </body>
 </html>

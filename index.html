@@ -9,12 +9,142 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <style>
-        /* Resize the image in Core Values Section */
-        .core-values-image-resize {
-            width: 200px;  /* Adjust this value to make the image smaller or larger */
-            height: auto;   /* Keep the aspect ratio intact */
-            display: block;
-            margin: 0 auto;  /* Centers the image */
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden; /* Ensures images don’t overflow outside the container */
+        }
+
+        /* Hide images by default */
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto; /* Adjust based on your aspect ratio needs */
+        }
+
+        /* Optional: Style for the images */
+        .mySlides img {
+            width: 100%; /* Makes images responsive */
+            height: auto;
+            object-fit: cover; /* Ensures images cover the entire slide without distortion */
+        }
+
+        /* Optional: Add a fade transition */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        /* Keyframes for fade effect */
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Resources Section Styling */
+        .resources-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .resources-section h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 30px;
+        }
+
+        .resources-section .resources-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .resource-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .resource-card h3 {
+            font-size: 1.5rem;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Volunteer Section Styles */
+        .volunteer-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f0f3f5;
+            margin-top: 0;
+            transition: opacity 1s ease-in-out; /* Smooth fade-in for the volunteer section */
+            opacity: 0; /* Initially hidden */
+        }
+
+        .volunteer-section.visible {
+            opacity: 1; /* Show the volunteer section */
+        }
+
+        .volunteer-section h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .volunteer-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .volunteer-section .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #2980b9;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 30px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .volunteer-section .cta-button:hover {
+            background-color: #3498db;
+        }
+
+        /* Divider between sections */
+        .divider {
+            width: 100%;
+            height: 5px;
+            background-color: #2980b9;
+            margin: 40px 0;
         }
     </style>
 </head>
@@ -41,7 +171,7 @@
                 <li><a href="community.html">Community</a></li>
                 <li><a href="success-stories.html">Success Stories</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li> 
+                <li><a href="volunteer.html">Volunteer</a></li>
             </ul>
         </nav>
     </header>
@@ -55,29 +185,116 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- About Us Section with Image Slideshow -->
     <section id="about" class="section">
-        <div class="about-container">
-            <h2>About Africa Tumaini Academy</h2>
-            <p>Africa Tumaini Academy is a non-profit organization dedicated to empowering African students by providing free, high-quality resources and mentorship to help them succeed in gaining access to U.S. universities. Through expert guidance and comprehensive preparation for the SAT and Duolingo English Test, we help students navigate the complex application process with confidence.</p>
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="mySlides fade">
+                <img src="images/slideshow-image1.jpg" alt="Image 1">
+            </div>
 
-            <h3>Our Mission</h3>
-            <p>Our mission is to ensure that African students have the tools, knowledge, and support needed to gain admission to U.S. universities. We offer free SAT and Duolingo prep materials, personalized mentorship, and guidance to help students reach their educational goals.</p>
+            <!-- Slide 2 -->
+            <div class="mySlides fade">
+                <img src="images/slideshow-image2.jpg" alt="Image 2">
+            </div>
 
-            <h3>Why We Do This</h3>
-            <p>We believe that every African student deserves an equal opportunity to pursue higher education abroad. By providing free resources and personalized mentorship, Africa Tumaini Academy removes the financial barriers and logistical challenges that many students face in preparing for U.S. university applications. Our goal is to make U.S. education accessible to all talented African students.</p>
+            <!-- Slide 3 -->
+            <!-- <div class="mySlides fade">
+                <img src="images/slideshow-image3.jpg" alt="Image 3">
+            </div> -->
+
+            <!-- Slide 4 -->
+            <!-- <div class="mySlides fade">
+                <img src="images/slideshow-image4.jpg" alt="Image 4">
+            </div> -->
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Resources Section -->
+        <section class="resources-section">
+            <h2>Essential Resources for Your Journey</h2>
+            <div class="resources-list">
+                <!-- Resource 1: Guides for TOEFL, Duolingo, SAT, Visa Interviews & More -->
+                <div class="resource-card">
+                    <h3>Guides for TOEFL, Duolingo, SAT, Visa Interviews & More</h3>
+                    <p>We offer comprehensive guides to help you prepare for important tests like TOEFL, Duolingo, SAT, Visa Interviews & much more!</p>
+                </div>
+
+                <!-- Resource 2: Scholarships -->
+                <div class="resource-card">
+                    <h3>Scholarships You Don’t Want to Miss!</h3>
+                    <p>Access a collection of scholarships available to African students looking to study abroad. Maximize your chances of winning!</p>
+                </div>
+
+                <!-- Resource 3: Complete Scholarship Listings -->
+                <div class="resource-card">
+                    <h3>Complete Scholarship Listings</h3>
+                    <p>Browse our complete listings of scholarships that cater to students aspiring to study in the U.S. and other countries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Volunteer Section Link under the images -->
+        <div class="volunteer-section">
+            <h2>Want to Make a Difference? Volunteer with Us!</h2>
+            <p>Join us in our mission to empower African students to access U.S. education. Volunteer and contribute to our cause by mentoring, creating resources, or supporting our initiatives.</p>
+            <a href="volunteer.html" class="cta-button">Become a Volunteer</a>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact">
-        <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
-        <div class="social-icons">
-            <a href="#">Instagram</a> | 
-            <a href="#">Facebook</a> | 
-            <a href="#">TikTok</a>
+    <footer>
+        <div class="footer-content">
+            <!-- Logo on the left -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <!-- Text centered -->
+            <div class="footer-text">
+                <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+                <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="https://www.tiktok.com/@chkidesign/video/7458494831875132702">TikTok</a></p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript for the slideshow -->
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Hide all slides
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1; // Reset if the slideIndex exceeds the number of slides
+            }
+            slides[slideIndex - 1].style.display = "block"; // Show the current slide
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        showSlides(); // Call the function to start the slideshow
+    </script>
+
+    <!-- JavaScript for the volunteer section fade-in -->
+    <script>
+        window.addEventListener('load', function() {
+            const volunteerSection = document.querySelector('.volunteer-section');
+            // Delay the appearance of the volunteer section for smooth transition
+            setTimeout(() => {
+                volunteerSection.classList.add('visible');
+            }, 1000); // Add class after 1 second
+        });
+    </script>
 
     <!-- JavaScript for the mobile navbar toggle -->
     <script>

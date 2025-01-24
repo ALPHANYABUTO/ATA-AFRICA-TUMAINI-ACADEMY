@@ -6,6 +6,79 @@
     <title>Success Stories - Africa Tumaini Academy</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Success Stories Section */
+        #success-stories {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        #success-stories h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #success-stories p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Grid layout for success stories */
+        .story-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;  /* Add spacing between each card */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .story-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+        }
+
+        /* Hover effect for each card */
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Title for each success story */
+        .story-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Paragraph styling for the story text */
+        .story-card p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .story-cards {
+                grid-template-columns: repeat(2, 1fr);  /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .story-cards {
+                grid-template-columns: 1fr;  /* 1 item per row on small screens */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,26 +106,57 @@
             </ul>
         </nav>
     </header>
+    
     <!-- Success Stories Section -->
-    <section id="success-stories" class="section">
+    <section id="success-stories">
         <h2>Success Stories</h2>
-        <p>Read about how Africa Tumaini Academy has helped students improve their SAT and Duolingo scores, and achieve their dreams of studying in the U.S.</p>
-        
-        <div class="story-card">
-            <h3>Mary's Story</h3>
-            <p>"Thanks to the SAT prep materials I received from Africa Tumaini Academy, I improved my score by 300 points and got into my dream university!"</p>
-        </div>
-        
-        <div class="story-card">
-            <h3>John's Story</h3>
-            <p>"The mentorship I received helped me improve my Duolingo score and apply to universities in the U.S. I’m now studying at Harvard!"</p>
+        <p>Read how Africa Tumaini Academy has helped students navigate the college application process, improve their SAT and Duolingo scores, and find their true career paths. Many of our students have shared their personal experiences with us, and we are proud to showcase their journeys.</p>
+
+        <!-- Stories displayed in a grid layout -->
+        <div class="story-cards">
+            <div class="story-card">
+                <h3>Mary's Story: From Struggling to Thriving</h3>
+                <p>"Before joining Africa Tumaini Academy, I felt lost in the college application process. The SAT prep materials helped me improve my score by 300 points, and my mentor helped me clarify my career path. I ended up choosing a major that truly resonates with my passions, and now I’m excited to study abroad in the upcoming semester!"</p>
+            </div>
+            
+            <div class="story-card">
+                <h3>John's Story: Gaining Confidence and Clarity</h3>
+                <p>"The journey to studying abroad felt overwhelming, but Africa Tumaini Academy’s support made all the difference. My mentor helped me improve my Duolingo score, but more importantly, they guided me through the application process and helped me choose universities that fit my career goals. Now I can’t wait to start my studies abroad!"</p>
+            </div>
+
+            <div class="story-card">
+                <h3>Grace's Story: Finding Her True Calling</h3>
+                <p>"When I first found Africa Tumaini Academy, I had no idea what career to pursue. My mentor helped me identify my strengths and led me toward a career in Environmental Science. They also guided me to universities that are perfect for my aspirations, and I’m now eagerly waiting to study abroad!"</p>
+            </div>
+
+            <div class="story-card">
+                <h3>David's Story: Breaking Down Barriers</h3>
+                <p>"The college application process seemed complicated at first, but Africa Tumaini Academy made it manageable. With their help, I raised my SAT score, received invaluable advice on choosing universities, and am now about to begin my studies abroad — I couldn’t be more excited for this next step!"</p>
+            </div>
+
+            <div class="story-card">
+                <h3>Alice's Story: Inspired by a TikTok Video</h3>
+                <p>"I discovered Africa Tumaini Academy after watching a TikTok video from one of the founders. Their advice about studying abroad was so motivating that I decided to reach out. With the help of my mentor, I raised my Duolingo score, got personalized advice on university options, and now I’m preparing to study abroad!"</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact">
-        <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
-        <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a></p>
+    <footer>
+        <div class="footer-content">
+            <!-- Logo on the left -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <!-- Text centered -->
+            <div class="footer-text">
+                <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+                <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="https://www.tiktok.com/@chkidesign/video/7458494831875132702">TikTok</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>

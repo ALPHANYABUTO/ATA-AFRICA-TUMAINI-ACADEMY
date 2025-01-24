@@ -6,6 +6,134 @@
     <title>Community - Africa Tumaini Academy</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* General Community Section Styling */
+        #community {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #community h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 30px;
+        }
+
+        /* Community Description (Centered, No Box) */
+        .community-description {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Card Style Containers for Mentorship & Ask a Question */
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px; /* Increase the border-radius for more curve */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 80%; /* Make it more rectangular */
+            max-width: 800px; /* Limit the max width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Mentorship Button Styling */
+        .mentor-signup .cta-button {
+            background-color: #e67e22; /* Custom Orange for Mentorship */
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: none;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .mentor-signup .cta-button:hover {
+            background-color: #f39c12; /* Hover effect for Mentorship Button */
+        }
+
+        /* Submit Button Styling */
+        .question-form .cta-button {
+            background-color: #2980b9; /* Blue color for Submit Button */
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: none;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .question-form .cta-button:hover {
+            background-color: #3498db; /* Hover effect for Submit Button */
+        }
+
+        /* Form Elements */
+        .question-form {
+            width: 100%;
+        }
+
+        .question-form .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .question-form textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            resize: vertical;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #community .container {
+                width: 90%;
+            }
+
+            .card {
+                margin-bottom: 20px;
+                width: 90%; /* Full width on smaller screens */
+            }
+
+            .mentor-signup .cta-button,
+            .question-form .cta-button {
+                width: 100%; /* Buttons take up full width on mobile */
+            }
+
+            .question-form textarea {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,29 +161,70 @@
             </ul>
         </nav>
     </header>
+
     <!-- Community Section -->
     <section id="community">
         <div class="container">
-            <h2>Community</h2>
+            <h2>Our Community</h2>
 
-            <h3>Ask a Question</h3>
-            <div class="community-form-container">
-                <form class="question-form">
-                    <div class="form-group">
-                        <label for="question">Your Question:</label>
-                        <textarea id="question" rows="4" placeholder="Type your question here..." required></textarea>
-                    </div>
-                    <button class="cta-button">Submit</button>
-                </form>
+            <!-- Community Description (Centered) -->
+            <div class="community-description">
+                <p>
+                    At Africa Tumaini Academy, our community is the heart of what we do. This section is dedicated to providing a platform where students, volunteers, and mentors can connect, share knowledge, and support each other. Whether you're looking for guidance on your journey to studying abroad, need help with test preparation, or want to be part of a growing network of like-minded individuals, you're in the right place.
+                </p>
+                <p>
+                    Our community section allows students to ask questions, engage in meaningful conversations, and seek mentorship. We believe in the power of collective knowledge and collaboration, and we want to make sure that no student has to go through this journey alone.
+                </p>
             </div>
 
-            <h3>Mentorship</h3>
-            <p>Sign up for free mentorship sessions to get personalized help with your SAT or Duolingo prep.</p>
-            <button class="cta-button">Sign Up</button>
+            <!-- Mentorship Section (Modern Rectangular Box) -->
+            <div class="card mentor-signup">
+                <h3>Mentorship</h3>
+                <p>Sign up for free mentorship sessions to get personalized help with your SAT or Duolingo prep.</p>
+                <button class="cta-button">Sign Up</button>
+            </div>
+
+            <!-- Ask a Question Section (Modern Rectangular Box) -->
+            <div class="card">
+                <h3>Ask a Question</h3>
+                <p>Have any doubts or questions? Ask us! Our mentors and community are here to help you out.</p>
+                <div class="community-form-container">
+                    <form class="question-form">
+                        <div class="form-group">
+                            <label for="question">Your Question:</label>
+                            <textarea id="question" rows="4" placeholder="Type your question here..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact">
-        <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
-        <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#"
+    <footer>
+        <div class="footer-content">
+            <!-- Logo on the left -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <!-- Text centered -->
+            <div class="footer-text">
+                <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+                <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="https://www.tiktok.com/@chkidesign/video/7458494831875132702">TikTok</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    
+</body>
+</html>

@@ -38,14 +38,32 @@
             color: #333;
         }
 
-        .volunteer-section .volunteer-description ul {
-            list-style-type: none;
-            padding: 0;
+        /* Volunteer Boxes Layout */
+        .volunteer-section .volunteer-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
         }
 
-        .volunteer-section .volunteer-description ul li {
-            font-size: 1.1rem;
-            margin: 8px 0;
+        .volunteer-section .volunteer-box {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #2980b9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 22%; /* Ensures they stay in a row and have a bit of space between them */
+            text-align: left;
+        }
+
+        .volunteer-section .volunteer-box h4 {
+            font-size: 1.5rem;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .volunteer-section .volunteer-box p {
+            font-size: 1rem;
+            color: #333;
         }
 
         .volunteer-section .cta-button {
@@ -65,6 +83,19 @@
 
         .volunteer-section .cta-button:hover {
             background-color: #3498db;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .volunteer-section .volunteer-options {
+                flex-direction: column; /* Stack the boxes vertically on smaller screens */
+                align-items: center; /* Center them horizontally */
+            }
+
+            .volunteer-section .volunteer-box {
+                width: 80%; /* Make each box take up more width on small screens */
+                margin-bottom: 20px; /* Add space between boxes */
+            }
         }
     </style>
 </head>
@@ -104,26 +135,53 @@
             <p>As a volunteer, you will play a pivotal role in our programs, helping students navigate the SAT and Duolingo tests, guiding them through the application process, and much more!</p>
             
             <h3>Ways You Can Volunteer:</h3>
-            <ul>
-                <li><strong>Mentorship:</strong> Help guide students through the SAT, TOEFL, or Duolingo test prep and U.S. college applications.</li>
-                <li><strong>Resource Development:</strong> Assist in creating study materials, guides, and practice exams for our students.</li>
-                <li><strong>Event Organization:</strong> Help us organize workshops, webinars, and outreach events for students.</li>
-                <li><strong>Fundraising:</strong> Contribute to raising funds for scholarships and other student needs.</li>
-            </ul>
+            <div class="volunteer-options">
+                <div class="volunteer-box">
+                    <h4>Mentorship</h4>
+                    <p>Help guide students through the SAT, TOEFL, or Duolingo test prep and U.S. college applications.</p>
+                </div>
+                <div class="volunteer-box">
+                    <h4>Resource Development</h4>
+                    <p>Assist in creating study materials, guides, and practice exams for our students.</p>
+                </div>
+                <div class="volunteer-box">
+                    <h4>Event Organization</h4>
+                    <p>Help us organize workshops, webinars, and outreach events for students.</p>
+                </div>
+                <div class="volunteer-box">
+                    <h4>Fundraising</h4>
+                    <p>Contribute to raising funds for scholarships and other student needs.</p>
+                </div>
+            </div>
             <p>Your involvement will directly impact the educational opportunities available to African students, helping them access U.S. higher education and achieve their dreams!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQuMwaKU6Dg8e4QOGO_hGjsN6IX_APcilEKP67mkS2zLyLKQ/viewform" target="_blank" class="cta-button">Join Us as a Volunteer</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQuMwaKU6Dg8e4QOGO_hGjsN6IX_APcilEKP67mkS2zLyLKQ/viewform" class="cta-button">Join Us as a Volunteer</a>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
-        <div class="social-icons">
-            <a href="#">Instagram</a> | 
-            <a href="#">Facebook</a> | 
-            <a href="#">TikTok</a>
+        <div class="footer-content">
+            <!-- Logo on the left -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="images/LOGO.png" alt="Africa Tumaini Academy Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <!-- Text centered -->
+            <div class="footer-text">
+                <p>&copy; 2025 Africa Tumaini Academy. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+                <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="https://www.tiktok.com/@chkidesign/video/7458494831875132702">TikTok</a></p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
     <!-- JavaScript for the mobile navbar toggle -->
     <script>
